@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CO&#8322; Control</title>
+    <link rel="icon" type="image/jpg" href="imgs/co2c2.jpg">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <style>
+    .section-with-bg {
+      background-image: url('imgs/forest2.jpg');
+      background-size: cover;
+      background-position: center;
+      color: lightgrey;
+    }
+    .section-content {
+      padding-left: 15 px;
+    }
+    .table-container {
+      padding: 60px;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      table-layout: auto !important;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: #f2f2f2;
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+     </style>
+</head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg bg-body-secondary">
+                <div class="container-fluid">
+                    <img src = "imgs/co2c2.jpg">
+                    <ul class="navbar-nav mr-auto">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                        <div class="navbar-nav">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                            <a class="nav-link" href="#">Unternehmen</a>
+                            <a class="nav-link" href="#">Länder</a>
+                                <form class="d-flex" role="search">
+                                    <input class="form-control me-2" type="search" placeholder="Ländersuche" aria-label="Search" id="searchInput">
+                                    <button class="btn btn-outline-success" type="submit">suchen</button>
+                                </form>  
+                        </div>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <section class="section-with-bg py-5">
+            <div class="container section-content">
+                <h1>Wir schaffen Transparenz</h1>
+                Finde heraus, welche Länder bzw. Unternehmen die größte Menge an CO<sub>2</sub> emittieren.
+            </div>
+            <div style="padding-bottom: 50px;"></div>
+        </section>
+
+        <section class="bg-body-secondary">
+            <div class="container table-container">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="form-row mb-3">
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Land" id="filterCountry">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="Firma" id="filterCompany">
+                            </div>
+                            <div class="col">
+                                <input type="text" class="form-control" placeholder="CO2 Ausstoß in Tonnen" id="filterCO2">
+                            </div>
+                        </div>
+                        <table id="jsonTable">
+                            <div class="table-responsive">
+                                
+                            <!-- Table will be dynamically generated here -->
+                            </div>
+                    </table>
+                </div>
+            </div>
+              <script src="script.js"></script>
+        </section>
+        <footer class="bg-body-secondary text-light py-1">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6 text-md-end">
+                  <p class="footer-center">
+                    <a href="/impressum.html" class="text-dark text-decoration-none me-3">Impressum</a>
+                    <a href="/datenschutz.html" class="text-dark text-decoration-none">Datenschutz</a>
+                  </p>
+                </div>
+            </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+    </body>
+</html>
